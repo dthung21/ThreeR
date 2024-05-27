@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import {Link} from "react-router-dom"
-const Navbar = () => {
+const Navbar = ( ) => {
   return (
     <div className="Navbar">
         <Link to="/" className="Navbar__element">Trang Chủ</Link>
