@@ -1,3 +1,6 @@
+.Navbar:hover {
+    display: flex;
+}
 .Navbar {
     display: flex;
     justify-content: center;
@@ -8,6 +11,10 @@
     border-top: 1px solid #fff;
     text-decoration: none;
     padding: 16px 0;
+    position: sticky;
+    top:120px;
+    z-index: 1;
+    
 }
 .Navbar .Navbar__element {
     text-decoration: none;

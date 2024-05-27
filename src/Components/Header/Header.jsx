@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../Assets/logo.png'
 import { faCamera, faMagnifyingGlass, faUser,faBell, faCircleXmark, faHeart } from '@fortawesome/free-solid-svg-icons'
 
-const Header = () => {
+const Header = ({ showNavbar }) => {
   return (
-    <div className="header">
+    <div className="header" onMouseEnter={showNavbar}>
         <div className="header__element header-logo">
         <img src={logo} alt="" />
         </div>

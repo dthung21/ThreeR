@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faCommentDots, faPenToSquare, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import logo from '../Assets/WEB/PICTURE/NHASANGTAO/logo.png'
 const Message = () => {
-  const [isShown, setIsShown] = useState(true);
+  const [isShown, setIsShown] = useState(false);
 
   const handleClick = event => {
     setIsShown(cur => !cur);

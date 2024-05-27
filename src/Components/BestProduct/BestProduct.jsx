@@ -8,14 +8,14 @@ import SPSC2 from "../Assets/WEB/PICTURE/DANHMUCDICHVU/SUACHUA/SPSC/SPSC2.jpg"
 const BestProduct = () => {
   return (
     <div className="bestproduct">
-        <div className="bestproduct__element heading">
+        <div className="bestproduct__heading">
             <h1>Sản phẩm nổi bật</h1>
         </div>
-        <div className="bestproduct__element product">
-            <div className="col start">
+        <div className="bestproduct__product">
+            <div className="col">
                 <img src={SPST1} alt="product" />
             </div>
-            <div className="col mid">
+            <div className="col__mid">
                 <div className="rowincol">
                     <img src={SPSC1} alt="product" />
                 </div>
