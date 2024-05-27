@@ -1,0 +1,31 @@
+.intro {
+    display: flex;
+    margin: 40px 60px;
+    gap: 165px;
+    justify-content: center;
+}
+
+.intro .intro__col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.intro .intro__col img {
+    width: 400px;
+}
+
+.intro .intro__col h1 {
+    font-size: 50px;
+}
+
+.intro .intro__col p {
+    line-height: 1.4;
+}
+
+
+.intro .intro__col p.lighter {
+    font-size: larger;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: normal;
+}

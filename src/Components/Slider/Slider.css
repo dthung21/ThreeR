@@ -1,0 +1,42 @@
+.image-slider-container {
+    margin: 40px auto;
+    width: 950px;
+    position: relative;
+    
+  }
+  
+  .image-slider-container .slick-prev:before,
+  .image-slider-container .slick-next:before {
+    color: black;
+  }
+  .slide {
+    height: 25rem;
+  }
+  .slide img {
+    width: inherit;
+    height: inherit;
+  }
+  
+  .custom-arrow {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+     /* Ensure arrows are on top of slides */
+  }
+  
+  .custom-arrow:hover {
+    cursor: pointer;
+    
+    font-size: 1.5rem;
+  }
+  
+  .custom-arrow.prev {
+    left: 40px; /* Adjust left position */
+    display: inline-block;
+    line-height: 100%;
+    z-index: 1;
+  }
+  
+  .custom-arrow.next {
+    right: 40px; /* Adjust right position */
+  }

@@ -1,0 +1,106 @@
+.message {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    
+}
+
+.message .message--button {
+    
+    
+    border-radius: 50%;
+    font-size: 30px;
+    
+    
+}
+
+
+.message .message--button .icon__:hover {
+
+ background-color: rgba(220, 206, 206, 0.778);
+ box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+ .message--button .icon__ {
+    color: #fff;
+    background-color:  #ccc;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    margin: 30px 40px;
+    
+}
+
+
+.message .chat--frame {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 305px;
+    height: 40rem;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 20px;
+ 
+}
+
+.message .chat--frame .frame__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 83px;
+    padding: 15px 0;
+}
+
+.chat--frame .frame__heading .frame--icon {
+    font-size: 20px;
+    color: #666;
+}
+
+.chat--frame .frame__heading h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+
+.chat--frame .frame__element {
+    margin-top: 20px;
+    display: flex;
+}
+
+.frame__element h3{
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.frame__element p {
+    margin-top: 5px;
+    font-size: 11px;
+}
+.frame__element .avatar img {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+    
+}
+
+.frame__element .avatar__ {
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+    background-color: #ccc;
+
+}
+.frame__element .avatar__ .avatar__icon {
+    font-size: 15px;
+    height: 35%;
+    transform: translateY(65%);
+    width: 100%;
+}

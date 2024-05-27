@@ -1,0 +1,72 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #000;
+    gap: 40px;
+    padding: 40px 60px 0 60px;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer .footer__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+    gap: 67px;
+}
+
+.footer h1 {
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-bottom: 25px;
+}
+
+.footer p {
+    font-size: 13px;
+    padding: 3px 0;
+    
+}
+
+.footer__info .footer__info__register {
+    width: 285px;
+}
+
+.footer__info .footer__info__invite {
+    width: 260px;
+}
+.footer__info .footer__info__public .social {
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+    font-size: 20px;
+}
+.footer__info p.last  {
+    padding-bottom: 30px;
+}
+
+.footer__info__register .inputemail {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+}
+.inputemail .inputblank input {
+    width: 245px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 7px;
+}
+.inputemail .inputemail__element button {
+    padding:8px 10px;
+    border-radius: 7px;
+}
+
+
+.footer__info__invite p.link {
+    font-style: italic;
+    font-weight: bold;
+}
+

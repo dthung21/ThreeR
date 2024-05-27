@@ -1,0 +1,59 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.service .service__heading  h1 {
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+.service .service__content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+.content--detail {
+    padding: 52.7px;
+    
+}
+
+.content--detail h1 {
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+   
+    box-shadow: 0 0 0 52.7px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: lighter;
+}
+
+
+.content--detail.creative {
+    background-image: url(../Assets/WEB/PICTURE/DANHMUCDICHVU/SANGTAO/sangtao.jpg);
+    
+    background-repeat: none;
+    background-size: cover;
+    
+    
+}
+.content--detail.fix {
+    background-image: url(../Assets/WEB/PICTURE/DANHMUCDICHVU/SUACHUA/suachua.png);
+    background-repeat: none;
+    background-size: cover;
+    box-shadow: 0 0 ;
+}
+.content--detail.pass {
+    background-image: url(../Assets/WEB/PICTURE/DANHMUCDICHVU/THANHLY/recycle.jpg);
+    background-repeat: none;
+    background-size: cover;
+    box-shadow: 0 0 ;
+}
+.content--detail.donate {
+    background-image: url(../Assets/WEB/PICTURE/DANHMUCDICHVU/QUYENGOP/quyengop.jpg);
+    background-repeat: none;
+    background-size: cover;
+    box-shadow: 0 0 ;
+}

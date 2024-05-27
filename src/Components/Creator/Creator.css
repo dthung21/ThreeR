@@ -1,0 +1,116 @@
+.creator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 30px;
+}
+
+.creator__element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 950px;
+    max-height: 200px;
+    gap: 30px;
+}
+
+.creator__element h1 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+  .overlay_tr {
+    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
+    top: 0;
+    left: 0;
+    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
+    height: 128px;
+    border-radius: 50%; /* Làm tròn lớp overlay */
+    background-color: rgba(0, 0, 0, 0); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
+  }
+
+  .overlay_ka {
+    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
+    top: 49.775px;;
+    left: 0;
+    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
+    height: 128px;
+    border-radius: 50%; /* Làm tròn lớp overlay */
+    background-color: rgba(0, 0, 0, 0); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
+    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1);
+}
+
+
+  .overlay_td {
+    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
+    top: 21.33px;
+    left: 0;
+    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
+    height: 128px;
+    border-radius: 50%; /* Làm tròn lớp overlay */
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
+  }
+
+  .overlay_hn {
+    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
+    top: 25.61px;
+    left: 0;
+    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
+    height: 128px;
+    border-radius: 50%; /* Làm tròn lớp overlay */
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
+  }
+
+
+  .overlay_kt {
+    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
+    top: 6.84px;
+    left: 0;
+    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
+    height: 128px;
+    border-radius: 50%; /* Làm tròn lớp overlay */
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
+  }
+
+
+  .overlay_mt {
+    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
+    top: 21.33px;
+    left: 0;
+    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
+    height: 128px;
+    border-radius: 50%; /* Làm tròn lớp overlay */
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
+  }
+
+.blur {
+    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
+    height: 128px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    z-index: 1;
+}
+.creator__element .creator--info {
+    overflow: hidden;
+    position: relative;
+}
+.creator__element .creator--info img {
+    max-width: 128px;
+    
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.creator--info h3 {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 13px;
+}

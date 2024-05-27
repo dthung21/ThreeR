@@ -1,0 +1,27 @@
+.Products {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto; /* Tạo ba cột có chiều rộng bằng nhau */
+    grid-gap: 30px 20px;
+    justify-content: center;
+    
+}
+
+.Products .item {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+.Products .item img{
+   
+    width: 200px;
+    position: absolute;
+    top: 50%; /* Di chuyển hình ảnh lên trên một nửa của phần tử container */
+    left: 50%; /* Di chuyển hình ảnh sang trái một nửa của phần tử container */
+    transform: translate(-50%, -50%);
+    
+}
+
