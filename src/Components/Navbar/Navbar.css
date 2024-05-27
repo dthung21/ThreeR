@@ -1,6 +1,4 @@
-.Navbar:hover {
-    display: flex;
-}
+
 .Navbar {
     display: flex;
     justify-content: center;
