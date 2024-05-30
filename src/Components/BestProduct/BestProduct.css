@@ -69,61 +69,6 @@
 }
 
 
-
-
-/* .bestproduct .bestproduct__product .col.start,
-.bestproduct .bestproduct__product .col.end {
-    width: 250px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 15px;
-}
-.bestproduct .bestproduct__product .col.mid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    
-}
-
-
-.bestproduct .bestproduct__product .col.start img,
-.bestproduct .bestproduct__product .col.end img {
-    
-    max-width: 100%;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
- }
-
- .bestproduct__product .col.mid .rowincol {
-    
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
- }
-
- .col.mid .rowincol img {
-    position: absolute;
-    max-width: 375px;
-    
- }
- .product .col .rowincol img {
-    max-width: 304px;
-    max-height: 400px;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
- }
- .bestproduct .bestproduct__product .col.end img {
-    max-width: 375px;
- } */
-
-
   
  
 

@@ -8,6 +8,7 @@ import Services from '../Pages/Services/Services';
 import DetailProduct from '../Pages/DetailProduct/DetailProduct';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import Creator from '../Pages/Creator/Creator';
 
 
 export const publicRoutes = [
@@ -20,6 +21,7 @@ export const publicRoutes = [
     {path: '/detailproduct', component: DetailProduct },
     {path: '/login', component: Login,layout:null },
     {path: '/register', component: Register,layout:null },
+    {path: '/creator', component:Creator  },
 ]
 
 export const privateRoutes = [

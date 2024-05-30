@@ -3,7 +3,7 @@ import Header from '../../Header/Header'
 import Navbar from '../../Navbar/Navbar'
 import Footer from '../../Footer/Footer'
 import Message from '../../Message/Message';
-import React, {useState, useEffect,CSSProperties} from 'react'
+import React, {useState, useEffect} from 'react'
 import {ChatWidget, ChatWindow, Papercups} from "@papercups-io/chat-widget";
 import './DefaultLayout.css'
 
@@ -13,11 +13,9 @@ const chatWidgetStyle = {
     backgroundColor: '#fff',
     borderRadius: '5px',
     color: '#000',
-
     position: "fixed",
     bottom: "0",
-    right:"0",
-    z_index:"1"
+    right:"0"
   },
   toggleContainer: {
     
@@ -58,7 +56,7 @@ const ExamplePage = () => {
         title="Welcome to Three R"
         subtitle=""
         primaryColor="#000"
-        greeting="dsadas"
+        greeting=""
         newMessagePlaceholder="Start typing..."
         showAgentAvailability={false}
         agentAvailableText="We're online right now!"
@@ -75,6 +73,7 @@ const ExamplePage = () => {
         //     plan: "premium"
         //   }
         // }}
+        
       />
     </>
   );

@@ -1,0 +1,8 @@
+.wrapper {
+    width: 100%;
+    color: #000;
+    background-color: #fff;
+    box-shadow: #00000012 0 2px 12px ;
+    border-radius: 8px;
+    max-height: min((100vh-96px)-60px,734px);   
+}

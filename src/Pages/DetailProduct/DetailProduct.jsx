@@ -27,7 +27,6 @@ const DetailProduct = () => {
 
   let { state }= useLocation();
 
-  console.log(state.codID)
     return (
       <div className="detailproduct">
         <div className="detailproduct__info">
