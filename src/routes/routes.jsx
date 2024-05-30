@@ -6,6 +6,9 @@ import Products from '../Pages/Products/Products';
 import Intro from '../Pages/Intro/Intro';
 import Services from '../Pages/Services/Services';
 import DetailProduct from '../Pages/DetailProduct/DetailProduct';
+import Login from '../Pages/Login/Login';
+import Register from '../Pages/Register/Register';
+
 
 export const publicRoutes = [
     {path: '/', component: Home },
@@ -15,6 +18,8 @@ export const publicRoutes = [
     {path: '/products', component: Products },
     {path: '/forum', component: Forum },
     {path: '/detailproduct', component: DetailProduct },
+    {path: '/login', component: Login,layout:null },
+    {path: '/register', component: Register,layout:null },
 ]
 
 export const privateRoutes = [
