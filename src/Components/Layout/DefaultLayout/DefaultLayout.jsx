@@ -2,9 +2,8 @@
 import Header from '../../Header/Header'
 import Navbar from '../../Navbar/Navbar'
 import Footer from '../../Footer/Footer'
-import Message from '../../Message/Message';
 import React, {useState, useEffect} from 'react'
-import {ChatWidget, ChatWindow, Papercups} from "@papercups-io/chat-widget";
+import {ChatWidget} from "@papercups-io/chat-widget";
 import './DefaultLayout.css'
 
 
@@ -40,11 +39,6 @@ const chatWidgetStyle = {
 const ExamplePage = () => {
   return (
     <>
-      {/*
-        Put <ChatWidget /> at the bottom of whatever pages you would
-        like to render the widget on, or in your root/router component
-        if you would like it to render on every page
-      */}
       <ChatWidget
         styles={chatWidgetStyle}
         // `accountId` is used instead of `token` in older versions
