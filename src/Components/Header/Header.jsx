@@ -22,11 +22,10 @@ const Header = ({ showNavbar }) => {
     const handleIconClick2 = () => {
         setVisible2(!visible2);
   };
-    const [showFavorite, setShowFavorite] = useState(true);
 
     const handleExit = () => {
         setVisible1(false);
-      }; 
+    }; 
   return (
     <div className="header" onMouseEnter={showNavbar}>
         <div className="header__element header-logo">
