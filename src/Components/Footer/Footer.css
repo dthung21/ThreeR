@@ -3,64 +3,66 @@
     flex-direction: column;
     color: #fff;
     background-color: #000;
-    gap: 40px;
-    padding: 40px 60px 0 60px;
-    margin-top: 80px;
+    gap: 2.5rem;
+    padding: 2.5rem 3.75rem 0 3.75rem;
+    margin-top: 5rem;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
-
+.footer .footer__Copyright {
+    padding-right: 54.875rem;
+}
 .footer .footer__info {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     
-    gap: 67px;
+    gap: 4.188rem;
 }
 
 .footer h1 {
     text-transform: uppercase;
-    font-size: 15px;
-    padding-bottom: 25px;
+    font-size: 0.938rem;
+    padding-bottom: 1.563rem;
 }
 
 .footer p {
-    font-size: 13px;
-    padding: 3px 0;
+    font-size: 0.813rem;
+    padding: 0.188rem 0;
 }
 
 .footer__info .footer__info__register {
-    width: 285px;
+    width: 17.813rem;
 }
 
 .footer__info .footer__info__invite {
-    width: 260px;
+    width: 16.25rem;
 }
 .footer__info .footer__info__public .social {
     display: flex;
     justify-content: center;
-    gap: 23px;
-    font-size: 20px;
+    gap: 1.438rem;
+    font-size: 1.25rem;
 }
 .footer__info p.last  {
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
 .footer__info__register .inputemail {
     display: flex;
-    gap: 15px;
+    gap: 0.938rem;
     align-items: flex-end;
 }
 .inputemail .inputblank input {
-    width: 245px;
-    padding-left: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 7px;
+    width: 15.313rem;
+    padding-left: 0.625rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.438rem;
 }
 .inputemail .inputemail__element button {
-    padding:8px 10px;
-    border-radius: 7px;
+    padding:0.5rem 0.625rem;
+    border-radius: 0.438rem;
 }
 
 

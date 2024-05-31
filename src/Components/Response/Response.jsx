@@ -10,7 +10,7 @@ const Response = () => {
                 <h2>Gửi Phản Hồi</h2>
             </div>
             <div className="header__element">
-                <p>Three R luôn trân trọng khách hàng của mình. Chứng tôi luôn tìm cách cải thiện trải nghiệm của bạn. Xin hãy cho chúng tôi biết những gì bạn nghĩ.</p>
+                <p>Three R luôn trân trọng khách hàng của mình. Chúng tôi luôn tìm cách cải thiện trải nghiệm của bạn. Xin hãy cho chúng tôi biết những gì bạn nghĩ.</p>
             </div>
         </div>
         <div className="response__input">
