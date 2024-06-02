@@ -32,12 +32,14 @@ import "react-toastify/dist/ReactToastify.css"
 import axios from "axios"
 import { loginRoute } from '../../utils/APIRoutes';
 
-const Login = () => {
+
+const Login = ({ onExit }) => {
     const navigate = useNavigate()
     const [values, setValues] = useState({
         username: "",
         password: "",
     })
+    
     const toastOptions ={
         position: "bottom-right",
         autoClose: 8000,
@@ -53,6 +55,7 @@ const Login = () => {
                 username,
                 password,
             })
+            console.log(data)
             if(data.status ===false) {
                 toast.error(data.msg, toastOptions)
             }
@@ -60,7 +63,6 @@ const Login = () => {
                 localStorage.setItem('Three-R-user',JSON.stringify(data.user))
                 navigate("/")
             }
-            
         }
 
     };
@@ -108,7 +110,7 @@ const Login = () => {
                 <button type='submit'>Log In</button>
                 <span>
                     Don't have an account ?
-                    <Link to='/register'>Register</Link>
+                    <p onClick={ onExit }>Register</p>
                 </span>
             </form>
         </div>

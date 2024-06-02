@@ -7,9 +7,9 @@ import logo from '../Assets/logo.png'
 import { faCamera, faMagnifyingGlass, faUser,faBell, faCircleXmark, faHeart } from '@fortawesome/free-solid-svg-icons'
 import PopperWrapper from '../Popper/Wrapper'
 import Favorite from './Notice/Favorite/Favorite'
+import User from './Users/User'
 
-
-const Header = ({ showNavbar }) => {
+const Header = ({ showNavbar, isLogin, user } ) => {
     const [visible, setVisible] = useState(false);
     const [visible1, setVisible1] = useState(false);
     const [visible2, setVisible2] = useState(false);
@@ -25,6 +25,9 @@ const Header = ({ showNavbar }) => {
 
     const handleExit = () => {
         setVisible1(false);
+    }; 
+    const handleExit1 = () => {
+        setVisible2(false);
     }; 
   return (
     <div className="header" onMouseEnter={showNavbar}>
@@ -53,24 +56,26 @@ const Header = ({ showNavbar }) => {
             <div className="header-function__element function-language">
                 <p>VN</p>
             </div>
+            
             <div className="header-function__element notice-icon">
                 
             <Tippy
                 visible={visible}
                 render={(attrs) => (
                 <PopperWrapper>
-                    <div className="notice-icon__element" tabIndex="-1" {...attrs}>
+                    <div className="notice-icon__element  " tabIndex="-1" {...attrs} >
                         <Notice />
                     </div>
                 </PopperWrapper>
                 )}
+                zIndex={1}
                 placement="bottom-start"
                 offset={[-70,10]}
                 interactive={true}
                 onClickOutside={() => setVisible(false)} // Hide when clicking outside
             >
-                <div onClick={handleIconClick}>
-                <FontAwesomeIcon icon={faBell} />
+                <div onClick={handleIconClick} className="function__icon">
+                <FontAwesomeIcon icon={faBell}   />
                 </div>
             </Tippy>
     
@@ -81,7 +86,7 @@ const Header = ({ showNavbar }) => {
                 visible={visible1}
                 render={(attrs) => (
                 <PopperWrapper>
-                    <div className="favorite__element" tabIndex="-1" {...attrs}>
+                    <div className="favorite__element  " tabIndex="-1" {...attrs}>
                         
                     <Favorite onExit={handleExit}/>
                     </div>
@@ -93,16 +98,38 @@ const Header = ({ showNavbar }) => {
                 interactive={true}
                 onClickOutside={() => setVisible1(false)} // Hide when clicking outside
             >
-                <div onClick={handleIconClick1}>
-                <FontAwesomeIcon icon={faHeart} />
+                <div onClick={handleIconClick1} className="function__icon">
+                <FontAwesomeIcon icon={faHeart}  />
                 </div>
             </Tippy>
             </div>
             <div className="header-function__element info-icon">
-                <FontAwesomeIcon  icon={faUser}/>
+            {visible2 && (
+                <div className="overlay" onClick={() => setVisible2(false)}></div>
+            )}
+
+            <Tippy
+                visible={visible2}
+                render={(attrs) => (
+                <PopperWrapper>
+                    <div className="notice-icon__element " tabIndex="-1" {...attrs} >
+                        <User onExit={handleExit1}/>
+                    </div>
+                </PopperWrapper>
+                )}
+                zIndex={12}
+                placement="bottom"
+                offset={[-472,10]}
+                interactive={true}
+                onClickOutside={() => setVisible2(false)} // Hide when clicking outside
+            >
+                <div onClick={handleIconClick2} className="function__icon">
+                    <FontAwesomeIcon  icon={faUser} />
+                </div>
+            </Tippy>
             </div>
         </div>
-        
+           
     </div>
   )
 }

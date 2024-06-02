@@ -6,32 +6,35 @@
     gap: 1rem;
     align-items: center;
     background-color: #000;
+    
 }
 
 .register .brand {
     display: flex;
     align-items: center;
-    gap: 1rem;
     justify-content: center;
 
 }
 
 
 .register .brand img {
-    height: 5rem;
+    height: 3rem;
+    margin-right: 0.4rem;
 
 }
 .register .brand h1 {
     text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-right: 0.4rem;
 }
 
 .register form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     background-color: #fff;
-    border-radius: 2rem;
-    padding: 3rem 5rem;
+
+    padding: 3rem 2rem;
     
     
 
@@ -39,11 +42,11 @@
 
 .register form input {
     background-color: transparent;
-    padding: 1rem;
+    padding: .4rem;
     border: 0.1rem solid #00000030;
     border-radius: 0.4rem;
     color: #000;
-    font-size: 1rem;
+    font-size: 0.7rem;
     width: 100%;
 }
 .register form input:focus {
@@ -56,13 +59,14 @@
 .register form button {
     background-color: #000;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: .7rem 1rem;
     border: none;
     font-weight: bold;
     cursor: pointer;
     border-radius: 0.4rem;
     text-transform: uppercase;
     transition: 0.5s ease-in-out;
+    font-size: small;
 
 
 }
@@ -72,13 +76,17 @@
 }
 
 .register form span {
+    display: flex;
     text-transform: uppercase;
+    font-size: 0.6rem;
+    text-align: center;
     
 }
 
-form span a {
+form span p {
     color: #00000050;
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
 }
 

@@ -8,18 +8,18 @@ import CreateCreator from '../../../Create/CreateCreator'
 
 
 
-const listItems = products.map((item) =>
-  <Link to='/detailproduct' state={item} key={item.id}>
-    <div className="item" >
-      <img src={item.thumb} alt={item.name} />
-    </div>
-  </Link>
-);
+
 
 const Favorite = ({ onExit }) => {
   const [visible, setVisible] = useState(true);
   const [visible1, setVisible1] = useState(false);
-  
+  const listItems = products.map((item) =>
+    <Link to='/detailproduct' state={item} key={item.id}  onClick={onExit}>
+      <div className="item" >
+        <img src={item.thumb} alt={item.name} />
+      </div>
+    </Link>
+  );
   const handleIconClick = () => {
           setVisible(true);
           setVisible1(false);
@@ -27,8 +27,7 @@ const Favorite = ({ onExit }) => {
   const handleIconClick1 = () => {
           setVisible1(true);
           setVisible(false);
-    };
-      
+    };   
   return (
     <div className="favorites1">
       <div className="favorites1__exit"  onClick={onExit}>
@@ -52,7 +51,7 @@ const Favorite = ({ onExit }) => {
           )}
           {visible1 && (
           <div className="creators">
-            <CreateCreator />
+            <CreateCreator onExit={onExit}/>
           </div>
           )}
          

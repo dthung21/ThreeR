@@ -1,13 +1,13 @@
 import React,{useState, useEffect} from 'react'
 import './Register.css'
-import { Link ,useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import logo from '../../Components/Assets/WEB/LOGO/logokonen.png'
 import { ToastContainer , toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import axios from "axios"
 import { regsiterRoute } from '../../utils/APIRoutes';
 
-const Register = () => {
+const Register = ({onExit}) => {
     const navigate = useNavigate()
     const [values, setValues] = useState({
         username: "",
@@ -29,12 +29,13 @@ const Register = () => {
     const handleSubmit = async (event) =>{
         event.preventDefault()
         if (handleValidation()) {
-            const {password, confirmpassword, username, email} = values
+            const {password, username, email} = values
             const {data} = await axios.post(regsiterRoute, {
                 username,
                 email,
                 password,
             })
+            console.log(data)
             if(data.status ===false) {
                 toast.error(data.msg, toastOptions)
             }
@@ -106,7 +107,7 @@ const Register = () => {
                 <button type='submit'>Create User</button>
                 <span>
                     Already have an account ?
-                    <Link to='/login'>Login</Link>
+                    <p onClick={ onExit }>Login</p>
                 </span>
             </form>
         </div>

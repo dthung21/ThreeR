@@ -6,7 +6,6 @@ import React, {useState, useEffect, useRef} from 'react'
 import {ChatWidget} from "@papercups-io/chat-widget";
 import './DefaultLayout.css'
 
-
 const chatWidgetStyle = {
   chatContainer: {
     backgroundColor: '#fff',
@@ -14,7 +13,11 @@ const chatWidgetStyle = {
     color: '#000',
     position: "fixed",
     bottom: "0",
-    right:"0"
+    right:"0",
+    height: "25rem",
+    width:"20rem",
+    size:"0.5rem",
+    fontSize:"0.5rem",
   },
   toggleContainer: {
     
@@ -22,7 +25,7 @@ const chatWidgetStyle = {
     right: '20px',
   },
   toggleButton: {
-    backgroundColor: '#000000',
+    backgroundColor: '#ccc',
     color: '#fff',
     border: 'none',
     borderRadius: '1.5rem',
@@ -32,11 +35,13 @@ const chatWidgetStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     cursor: 'pointer',
-    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)'
+    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)',
+    zIndex:"20",
   },
 };
 
 const ExamplePage = () => {
+  const [hideButton, setHideButton] = useState(false);
   return (
     <>
       <ChatWidget
@@ -47,7 +52,7 @@ const ExamplePage = () => {
         // accountId="03affe68-aec6-4fed-96f4-f0000345efb2"
         token="03affe68-aec6-4fed-96f4-f0000345efb2"
         inbox="f7f4f930-6950-4830-9a4a-3f98c6cfb999"
-        title="Welcome to Three R"
+        title="Chào mừng bạn đến với Three R"
         subtitle=""
         primaryColor="#000"
         greeting=""
@@ -62,12 +67,14 @@ const ExamplePage = () => {
         // customer={{
         //   name: __CUSTOMER__.name,
         //   email: __CUSTOMER__.email,
-        //   external_id: __CUSTOMER__.id,
+        //   external_id: __CUSTOMER__.id, 
         //   metadata: {
         //     plan: "premium"
         //   }
         // }}
-        
+        hideToggleButton ={hideButton}
+        onChatOpened={() => setHideButton(true)}
+        onChatClosed={() => setHideButton(false)}
       />
     </>
   );
@@ -104,7 +111,15 @@ function DefaultLayout( { children } ) {
   const showNavbar = () => {
     setIsNavbarVisible(true);
   };
-
+  // localStorage.removeItem('Three-R-user');
+  // const storedUser = localStorage.getItem('Three-R-user');
+  //           if (storedUser) {
+  //           const users = JSON.parse(storedUser);
+  //           console.log(users); // { id: 1, name: 'John Doe', email: 'john.doe@example.com' }
+  //           }
+  //           else{
+  //             console.log("1");
+  //           }
     return (
         <div>
             
