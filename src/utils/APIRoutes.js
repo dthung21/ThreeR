@@ -1,6 +1,6 @@
 
 
-const host = "http://localhost:5000"
+const host = "https://threer-backend.onrender.com"
 export const regsiterRoute= `${host}/api/auth/register`
 export const loginRoute= `${host}/api/auth/login`
 export const productListRoute= `${host}/api/auth/productlist`
