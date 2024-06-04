@@ -5,6 +5,7 @@ import Footer from '../../Footer/Footer'
 import React, {useState, useEffect, useRef} from 'react'
 import {ChatWidget} from "@papercups-io/chat-widget";
 import './DefaultLayout.css'
+import { useNavigate } from 'react-router-dom';
 
 const chatWidgetStyle = {
   chatContainer: {
@@ -40,8 +41,10 @@ const chatWidgetStyle = {
   },
 };
 
-const ExamplePage = () => {
+const ChatBox = () => {
   const [hideButton, setHideButton] = useState(false);
+  
+
   return (
     <>
       <ChatWidget
@@ -63,11 +66,11 @@ const ExamplePage = () => {
         requireEmailUpfront={false}
         iconVariant="outlined"
         baseUrl="https://app.papercups.io"
-        // Optionally include data about your customer here to identify them
+        //Optionally include data about your customer here to identify them
         // customer={{
-        //   name: __CUSTOMER__.name,
-        //   email: __CUSTOMER__.email,
-        //   external_id: __CUSTOMER__.id, 
+        //   name: users.username,
+        //   email: users.email,
+        //   external_id: users._id, 
         //   metadata: {
         //     plan: "premium"
         //   }
@@ -80,9 +83,25 @@ const ExamplePage = () => {
   );
 };
 function DefaultLayout( { children } ) {
-  const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const navigate = useNavigate();
+  const [isNavbarVisible, setIsNavbarVisible] = useState(null);
   const initialized = useRef(false); // Ref to track if the listener has been initialized
-
+  const [isLogin, setIsLogin] =useState(false);
+  const [user, setUser] = useState(null);
+  const handleLogout = () => {
+    localStorage.removeItem('Three-R-user');
+    setIsLogin(false);
+    navigate('/');
+  };  
+  useEffect(() => {
+    const storedUser = localStorage.getItem('Three-R-user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+      setIsLogin(true);
+    } else {
+      setIsLogin(false);
+    }
+  }, []); // This effect will only run once when the component mounts
   useEffect(() => {
     const handleScroll = () => {
       // Check if initialized before handling scroll logic
@@ -122,10 +141,8 @@ function DefaultLayout( { children } ) {
   //           }
     return (
         <div>
-            
-            
-            <ExamplePage />
-            <Header showNavbar={showNavbar}/>
+            <ChatBox />
+            <Header showNavbar={showNavbar} setIsLogin={() => setIsLogin(true)} isLogin={isLogin} user={user}  handleLogout={handleLogout}/>
             <div className="container">
                 {isNavbarVisible && <Navbar />}
                 <div className="content">{children}</div>

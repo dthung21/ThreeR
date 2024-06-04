@@ -2,12 +2,12 @@ import React,{useState, useEffect} from 'react'
 import './Register.css'
 import { useNavigate} from 'react-router-dom';
 import logo from '../../Components/Assets/WEB/LOGO/logokonen.png'
-import { ToastContainer , toast } from "react-toastify"
+import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import axios from "axios"
 import { regsiterRoute } from '../../utils/APIRoutes';
 
-const Register = ({onExit}) => {
+const Register = ({onExit,closeTippy}) => {
     const navigate = useNavigate()
     const [values, setValues] = useState({
         username: "",
@@ -17,7 +17,7 @@ const Register = ({onExit}) => {
     })
     const toastOptions ={
         position: "bottom-right",
-        autoClose: 8000,
+        autoClose: 5000,
         pauseOnHover: true,
         draggable: true,
     }
@@ -41,7 +41,9 @@ const Register = ({onExit}) => {
             }
             if(data.status === true)    {
                 localStorage.setItem('Three-R-user',JSON.stringify(data.user))
+                closeTippy()
                 navigate("/")
+                
             }
             
         }
@@ -111,7 +113,7 @@ const Register = ({onExit}) => {
                 </span>
             </form>
         </div>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
     
     </>
   )

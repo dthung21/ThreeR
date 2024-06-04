@@ -9,6 +9,9 @@ import DetailProduct from '../Pages/DetailProduct/DetailProduct';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import Creator from '../Pages/Creator/Creator';
+import ComingSoon from '../Components/ComingSoon/ComingSoon';
+import CreatedProducts from '../Pages/Products/CreatedProducts';
+import RepairedProducts from '../Pages/Products/RepairedProducts';
 
 
 export const publicRoutes = [
@@ -22,6 +25,9 @@ export const publicRoutes = [
     {path: '/login', component: Login,layout:null },
     {path: '/register', component: Register,layout:null },
     {path: '/creator', component:Creator  },
+    {path: '/comingsoon', component:ComingSoon  },
+    {path: '/createdproducts', component:CreatedProducts  },
+    {path: '/repairedproducts', component:RepairedProducts  },
 ]
 
 export const privateRoutes = [

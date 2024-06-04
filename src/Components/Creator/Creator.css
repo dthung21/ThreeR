@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
     padding: 30px;
 }
 
@@ -14,6 +13,7 @@
     max-width: 950px;
     max-height: 200px;
     gap: 30px;
+    padding-bottom: 35px;
 }
 
 .creator__element h1 {
@@ -21,96 +21,32 @@
     text-transform: uppercase;
     font-size: 23px;
 }
-
-  .overlay_tr {
-    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
-    top: 0;
-    left: 0;
-    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
-    height: 128px;
-    border-radius: 50%; /* Làm tròn lớp overlay */
-    background-color: rgba(0, 0, 0, 0); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
-  }
-
-  .overlay_ka {
-    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
-    top: 49.775px;;
-    left: 0;
-    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
-    height: 128px;
-    border-radius: 50%; /* Làm tròn lớp overlay */
-    background-color: rgba(0, 0, 0, 0); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
-    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1);
+.item__id1 {
+  height: 123px;
+  width: 123px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px #00000070;
+  
+}
+.item__id1 img{
+ 
+  width: 123px;
+  position: absolute;
+  top: 50%; /* Di chuyển hình ảnh lên trên một nửa của phần tử container */
+  left: 50%; /* Di chuyển hình ảnh sang trái một nửa của phần tử container */
+  transform: translate(-50%, -50%);
+  
 }
 
-
-  .overlay_td {
-    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
-    top: 21.33px;
-    left: 0;
-    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
-    height: 128px;
-    border-radius: 50%; /* Làm tròn lớp overlay */
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
-  }
-
-  .overlay_hn {
-    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
-    top: 25.61px;
-    left: 0;
-    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
-    height: 128px;
-    border-radius: 50%; /* Làm tròn lớp overlay */
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
-  }
-
-
-  .overlay_kt {
-    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
-    top: 6.84px;
-    left: 0;
-    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
-    height: 128px;
-    border-radius: 50%; /* Làm tròn lớp overlay */
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
-  }
-
-
-  .overlay_mt {
-    position: absolute; /* Đặt lớp overlay tại vị trí tuyệt đối */
-    top: 21.33px;
-    left: 0;
-    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
-    height: 128px;
-    border-radius: 50%; /* Làm tròn lớp overlay */
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0px 70px rgba(255, 255, 255, 1); /* Đặt màu nền cho overlay, ví dụ: màu đen với độ trong suốt là 0.5 */
-  }
-
-.blur {
-    width: 128px; /* Chiều rộng và chiều cao của overlay bằng với hình ảnh */
-    height: 128px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    z-index: 1;
-}
-.creator__element .creator--info {
-    overflow: hidden;
-    position: relative;
-}
-.creator__element .creator--info img {
-    max-width: 128px;
-    
-    object-fit: cover;
-    margin-bottom: 20px;
+.creator p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }
 
-.creator--info h3 {
-    padding-top: 10px;
-    text-align: center;
-    font-weight: lighter;
-    font-size: 13px;
+.link__creator1 {
+  text-decoration: none;
+  color: #000;
 }

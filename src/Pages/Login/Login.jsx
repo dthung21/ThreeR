@@ -25,16 +25,17 @@
 
 import React,{useState, useEffect} from 'react'
 import '../Register/Register.css'
-import { Link ,useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import logo from '../../Components/Assets/WEB/LOGO/logokonen.png'
-import { ToastContainer , toast } from "react-toastify"
+import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import axios from "axios"
 import { loginRoute } from '../../utils/APIRoutes';
 
 
-const Login = ({ onExit }) => {
+const Login = ({ onExit, closeTippy }) => {
     const navigate = useNavigate()
+
     const [values, setValues] = useState({
         username: "",
         password: "",
@@ -42,7 +43,7 @@ const Login = ({ onExit }) => {
     
     const toastOptions ={
         position: "bottom-right",
-        autoClose: 8000,
+        autoClose: 5000,
         pauseOnHover: true,
         draggable: true,
     }
@@ -61,7 +62,9 @@ const Login = ({ onExit }) => {
             }
             if(data.status === true)    {
                 localStorage.setItem('Three-R-user',JSON.stringify(data.user))
+                closeTippy()
                 navigate("/")
+                
             }
         }
 
@@ -114,7 +117,7 @@ const Login = ({ onExit }) => {
                 </span>
             </form>
         </div>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
     
     </>
   )

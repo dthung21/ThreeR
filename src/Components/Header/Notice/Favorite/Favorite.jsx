@@ -13,13 +13,18 @@ import CreateCreator from '../../../Create/CreateCreator'
 const Favorite = ({ onExit }) => {
   const [visible, setVisible] = useState(true);
   const [visible1, setVisible1] = useState(false);
+  const storedUser = localStorage.getItem('Three-R-user');
+  const productlist = storedUser ? JSON.parse(storedUser).productlist : [];
   const listItems = products.map((item) =>
-    <Link to='/detailproduct' state={item} key={item.id}  onClick={onExit}>
+    productlist.includes(item.id) ?<Link to='/detailproduct' state={item} key={item.id}  onClick={onExit}>
       <div className="item" >
         <img src={item.thumb} alt={item.name} />
       </div>
-    </Link>
+    </Link>:null
   );
+  for (let i = productlist.length; i < 4; i++) {
+    listItems.push(<div className="item empty" key={products.length+i}></div>);
+  }
   const handleIconClick = () => {
           setVisible(true);
           setVisible1(false);

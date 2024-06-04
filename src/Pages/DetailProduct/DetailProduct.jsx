@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './DetailProduct.css'
 import { faAngleDown, faHeart, faShareFromSquare, faStar, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
-
+import axios from 'axios';
+import { productListRoute } from '../../utils/APIRoutes';
 const stars = (star) => {
   const integerPart = Math.floor(star); // Get the integer part of the star value
   const decimalPart = star - integerPart; // Get the decimal part
@@ -24,9 +25,38 @@ const stars = (star) => {
 };
 
 const DetailProduct = () => {
-
+  const [isFavorite, setIsFavorite] = useState(false);
   let { state }= useLocation();
-
+  const storedUser = localStorage.getItem('Three-R-user');
+ useEffect(() => {
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      if (user.productlist.includes(state.id)) {
+        setIsFavorite(true);
+      }
+      else {
+        setIsFavorite(false);
+      }
+    }
+  }, [state.id, storedUser]);           
+  const ProductList = async (username,id) => {
+  
+    const {data} = await axios.post(productListRoute, {
+      username,
+      id,
+    })
+    
+    localStorage.setItem('Three-R-user', JSON.stringify(data.user));
+    setIsFavorite(data.user.productlist.includes(state.id));
+  // Define a function to handle clicking on the heart icon
+};
+const handleProductList = () => {
+  if (storedUser) {
+    const users = JSON.parse(storedUser);
+    ProductList(users.username,state.id);
+    
+  }
+};
     return (
       <div className="detailproduct">
         <div className="detailproduct__info">
@@ -65,8 +95,8 @@ const DetailProduct = () => {
               <div className="support__text">
                 <p>Tư vấn sản phẩm</p>
               </div>
-              <div className="support__hearticon">
-                <FontAwesomeIcon icon={faHeart} />
+              <div  className="support__hearticon" onClick={handleProductList}>
+                <FontAwesomeIcon icon={faHeart} className={isFavorite ? 'favorite1' : ''}/>
               </div>
             </div>
             <div className="detail__element">

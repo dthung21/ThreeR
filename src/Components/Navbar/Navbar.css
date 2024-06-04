@@ -2,20 +2,81 @@
 .Navbar {
     display: flex;
     justify-content: center;
-    gap: 100px;
-    padding: 10px 60px;
+    
     color: #fff;
     background-color: #000;
     border-top: 1px solid #fff;
     text-decoration: none;
-    padding: 16px 0;
+    
     position: sticky;
     top:120px;
     z-index: 9;
-    
+    transition: opacity 1s ease;
     
 }
 .Navbar .Navbar__element {
     text-decoration: none;
     color: #fff;
+    position: relative;
+    padding: 16px 50px;
 }
+
+
+.Navbar .Navbar__element .subNavbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: #000;
+    left: 26px;
+    
+    font-size: 10px;
+    padding-top: 10px;
+    
+    
+}
+.Navbar__element .subNavbar .subNavbar__element  {
+    padding: 5px 65px 10px 15px;
+    text-decoration: none;
+    color: #fff;
+}
+.Navbar__element .subNavbar .subNavbar__element:hover {
+    border-bottom: 2px solid #ccc;
+}
+
+.border__bottom {
+    border-bottom: 2px solid #ccc;
+}
+
+.border__top {
+    position: relative;
+}
+
+.border__top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 42%; /* Start at the middle */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 60%; /* Adjust this value to make the border shorter or longer */
+    border-top: 2px solid #ccc;
+  }
+
+  .border__top1 {
+    position: relative;
+}
+
+.border__top1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Start at the middle */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 75%; /* Adjust this value to make the border shorter or longer */
+    border-top: 2px solid #ccc;
+  }
+
+  .Navbar__element >a  {
+    text-decoration: none;
+    color: #fff;
+  }

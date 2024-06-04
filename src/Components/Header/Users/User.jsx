@@ -3,7 +3,8 @@ import './User.css'
 import Login from '../../../Pages/Login/Login';
 import Register from '../../../Pages/Register/Register'
 
-const User = ({onExit}) => {
+
+const User = ({closeTippy}) => {
     const [visible, setVisible] = useState(false);
     const handleExit = () => {
         setVisible(!visible);
@@ -11,12 +12,12 @@ const User = ({onExit}) => {
     return (
       <div className='users'>
         <div className={`users__login ${visible ? 'displaynone' : ''}`}>
-            <Login onExit={handleExit}/>
+            <Login onExit={handleExit} closeTippy={closeTippy}/>
         </div>
         <div className={`user__register ${!visible ? 'displaynone' : ''}`}>
-            <Register onExit={handleExit}/>
+            <Register onExit={handleExit} closeTippy={closeTippy}/>
         </div>
-            
+          
       </div>
     )
   }

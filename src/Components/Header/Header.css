@@ -129,6 +129,9 @@ input::placeholder {
      /* Adjust the blur effect as needed */
     z-index: 10; /* Ensure the overlay is above other content */
 }
-
+p.logOut {
+    padding: 1px 2px;
+    cursor: pointer;
+}
 
 

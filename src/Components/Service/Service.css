@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    
 }
 
 .service .service__heading  h1 {
@@ -15,6 +16,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    
     
 }
 .content--detail {
@@ -39,6 +41,7 @@
     background-size: cover;
     
     
+    
 }
 .content--detail.fix {
     background-image: url(../Assets/WEB/PICTURE/DANHMUCDICHVU/SUACHUA/suachua.png);
@@ -57,4 +60,9 @@
     background-repeat: none;
     background-size: cover;
     box-shadow: 0 0 ;
+}
+
+.text-decoration {
+    text-decoration: none;
+    cursor: pointer;
 }

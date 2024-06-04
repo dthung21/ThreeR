@@ -3,6 +3,7 @@ import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareFacebook, faSquareInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons'
 import { faSquareEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className="footer">
@@ -23,9 +24,9 @@ const Footer = () => {
                 <p className='last'>Liên hệ</p>
                 <h1>Theo dõi ngay</h1>
                 <div className="social">
-                    <div className="social__element">
+                    <Link to="https://www.facebook.com/TinhHoaHoiTu.ThreeR" target="_blank" className="social__element">
                     <FontAwesomeIcon icon={faSquareFacebook} />
-                    </div>
+                    </Link>
                     <div className="social__element">
                     <FontAwesomeIcon icon={faSquareInstagram} />
                     </div>

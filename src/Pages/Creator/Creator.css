@@ -1,0 +1,141 @@
+.creatorpage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.creatorpage .creatorpage__info {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    align-items: center;
+    
+}
+
+.creatorpage .creatorpage__info .info__creator  {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.creatorpage .creatorpage__info .info__creator .creator__link {
+    font-weight: bold;
+}
+.creatorpage .creatorpage__info .info__creator .creator__header {
+    padding-top:15px;
+    font-size: 47px;
+}
+.creatorpage .creatorpage__info .info__creator .creator__role {
+    font-size: 19px;
+    color: #00000070;
+
+}
+.creatorpage .creatorpage__info .info__creator .creator__like {
+    display: flex;
+    gap:30px;
+    font-size: 12px;
+    padding-top: 20px;
+}
+.creatorpage .creatorpage__info .info__creator .creator__favorite {
+    padding-top: 5px;
+}
+.star {
+    padding:0 5px;
+    font-size: 14px;
+}
+.creatorpage .creatorpage__info .info__creator .creator__invite {
+    padding-top: 30px;
+    font-size: 13px;
+}
+.creatorpage .creatorpage__info .info__creator .creator__frame {
+    width: 500px;
+    height: 100px;
+    border: 2px solid #00000020;
+    border-radius: 5px;
+}
+.info__creator .creator__frame p {
+    padding: 10px;
+    
+    font-size: 12px;
+    color: #00000050;
+}
+
+
+.info__avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info__avatar .avatar__image  {
+    width: 264px;
+    height: 264px;
+    
+    border: 1.5px solid #00000020;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 1px #00000050;
+
+}
+.info__avatar .avatar__image img{
+    width: 260px;
+    
+    position: absolute;
+    top: 50%; /* Di chuyển hình ảnh lên trên một nửa của phần tử container */
+    left: 50%; /* Di chuyển hình ảnh sang trái một nửa của phần tử container */
+    transform: translate(-50%, -50%); 
+    
+
+    
+}
+.info__avatar .avatar__button {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.info__avatar .avatar__button button {
+    padding: 10px 86px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+.info__avatar .avatar__iconheart {
+    font-size: 28px;
+    color:  #ccc;
+    
+}
+.creatorpage__remain {
+    margin-top: 70px;
+    
+}
+.creatorpage__remain .tilte {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    
+    margin: 0 100px;
+    border-top: 1px solid #ccc;
+}
+.creatorpage__remain .tilte p {
+    text-transform: uppercase;
+    padding-top: 20px ;
+    padding: 20px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.creatorpage__remain .remain__posts .Products {
+    padding: 0;
+}
+.borderbox {
+    border-top: 3px solid #000;
+}
+
+
+
+.favorite {
+    color: red;
+  }

@@ -43,6 +43,11 @@
     justify-content: center;
     gap: 1.438rem;
     font-size: 1.25rem;
+    
+}
+.footer__info__public .social .social__element {
+    text-decoration: none;
+    color: #fff;
 }
 .footer__info p.last  {
     padding-bottom: 1.875rem;

@@ -8,16 +8,39 @@ import { faCamera, faMagnifyingGlass, faUser,faBell, faCircleXmark, faHeart } fr
 import PopperWrapper from '../Popper/Wrapper'
 import Favorite from './Notice/Favorite/Favorite'
 import User from './Users/User'
+import { toast,ToastContainer } from 'react-toastify'
 
-const Header = ({ showNavbar, isLogin, user } ) => {
+const Header = ({ showNavbar, isLogin, user,handleLogout,setIsLogin } ) => {
+    
     const [visible, setVisible] = useState(false);
     const [visible1, setVisible1] = useState(false);
     const [visible2, setVisible2] = useState(false);
+    const [isToast, setIsToast] = useState(false);
+    const toastOptions ={
+        position: "bottom-right",
+        autoClose: 4000,
+        pauseOnHover: true,
+        draggable: true,
+        closeOnClick: true,
+    }
+    
     const handleIconClick = () => {
-        setVisible(!visible);
+        if(isLogin===true)
+            setVisible(!visible);
+        else
+        {
+            toast.error("Đăng nhập để sử dụng!",
+            toastOptions)
+        }
   };
     const handleIconClick1 = () => {
-        setVisible1(!visible1);
+        if(isLogin===true)
+            setVisible1(!visible1);
+        else
+        {
+            toast.error("Đăng nhập để sử dụng!",
+            toastOptions)
+        }
   };
     const handleIconClick2 = () => {
         setVisible2(!visible2);
@@ -29,6 +52,24 @@ const Header = ({ showNavbar, isLogin, user } ) => {
     const handleExit1 = () => {
         setVisible2(false);
     }; 
+    const handleVisible2 = ()  => {
+        if(isToast !==true)
+            setVisible2(false);
+
+    }
+    const handleLogOut = () => {
+        setVisible2(false);
+        handleLogout()
+    }
+    const closeTippy = () => {
+        setVisible2(false);
+        setIsLogin()
+    
+    }
+
+    
+    
+
   return (
     <div className="header" onMouseEnter={showNavbar}>
         <div className="header__element header-logo">
@@ -63,9 +104,12 @@ const Header = ({ showNavbar, isLogin, user } ) => {
                 visible={visible}
                 render={(attrs) => (
                 <PopperWrapper>
-                    <div className="notice-icon__element  " tabIndex="-1" {...attrs} >
-                        <Notice />
-                    </div>
+                    {isLogin &&(
+                        <div className="notice-icon__element  " tabIndex="-1" {...attrs} >
+                            <Notice />
+                        </div>
+                    )}
+                    
                 </PopperWrapper>
                 )}
                 zIndex={1}
@@ -86,10 +130,12 @@ const Header = ({ showNavbar, isLogin, user } ) => {
                 visible={visible1}
                 render={(attrs) => (
                 <PopperWrapper>
-                    <div className="favorite__element  " tabIndex="-1" {...attrs}>
-                        
-                    <Favorite onExit={handleExit}/>
-                    </div>
+                    {isLogin &&(
+                        <div className="favorite__element  " tabIndex="-1" {...attrs}> 
+                        <Favorite onExit={handleExit}/>
+                        </div>
+                    )}
+                    
                 </PopperWrapper>
                 )}
                 
@@ -104,7 +150,7 @@ const Header = ({ showNavbar, isLogin, user } ) => {
             </Tippy>
             </div>
             <div className="header-function__element info-icon">
-            {visible2 && (
+            {!isLogin&&visible2 && (
                 <div className="overlay" onClick={() => setVisible2(false)}></div>
             )}
 
@@ -112,24 +158,33 @@ const Header = ({ showNavbar, isLogin, user } ) => {
                 visible={visible2}
                 render={(attrs) => (
                 <PopperWrapper>
-                    <div className="notice-icon__element " tabIndex="-1" {...attrs} >
-                        <User onExit={handleExit1}/>
-                    </div>
+                    {!isLogin &&(
+                        <div className="notice-icon__element " tabIndex="-1" {...attrs} >
+                            <User closeTippy={closeTippy}/>
+                        </div>
+                    )}
+                    {isLogin &&(
+                        <div className="notice-icon__element " tabIndex="-1" {...attrs} >
+                            <p className="logOut" onClick={handleLogOut}>Log out</p>
+                        </div>
+                    )}
+                    
                 </PopperWrapper>
                 )}
                 zIndex={12}
                 placement="bottom"
-                offset={[-472,10]}
+                offset={isLogin ? [0,10] : [-472,10]}
                 interactive={true}
-                onClickOutside={() => setVisible2(false)} // Hide when clicking outside
+                onClickOutside={isLogin ? () =>setVisible2(false) : () => handleVisible2 } // Hide when clicking outside
             >
                 <div onClick={handleIconClick2} className="function__icon">
                     <FontAwesomeIcon  icon={faUser} />
                 </div>
             </Tippy>
             </div>
+            <ToastContainer onClick={setIsToast} />
         </div>
-           
+    
     </div>
   )
 }
