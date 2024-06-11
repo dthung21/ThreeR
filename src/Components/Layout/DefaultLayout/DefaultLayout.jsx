@@ -93,6 +93,7 @@ function DefaultLayout( { children } ) {
     setIsLogin(false);
     navigate('/');
   };  
+
   useEffect(() => {
     const storedUser = localStorage.getItem('Three-R-user');
     if (storedUser) {
