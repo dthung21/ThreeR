@@ -93,7 +93,7 @@ function DefaultLayout( { children } ) {
     setIsLogin(false);
     navigate('/');
   };  
-
+  
   useEffect(() => {
     const storedUser = localStorage.getItem('Three-R-user');
     if (storedUser) {
@@ -142,7 +142,7 @@ function DefaultLayout( { children } ) {
   //           }
     return (
         <div>
-            <ChatBox />
+            {/* <ChatBox /> */}
             <Header showNavbar={showNavbar} setIsLogin={() => setIsLogin(true)} isLogin={isLogin} user={user}  handleLogout={handleLogout}/>
             <div className="container">
                 {isNavbarVisible && <Navbar />}

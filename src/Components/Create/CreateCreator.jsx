@@ -1,4 +1,4 @@
-import React,{useEffect,useRef} from 'react'
+import React from 'react'
 import './CreateCreator.css'
 import data from './data'
 import { Link } from 'react-router-dom';

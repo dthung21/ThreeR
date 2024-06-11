@@ -26,7 +26,42 @@ const stars = (star) => {
 
 const DetailProduct = () => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isImage1, setIsImage1] = useState(true);
+  const [isImage2, setIsImage2] = useState(false);
+  const [isImage3, setIsImage3] = useState(false);
+  const [isImage4, setIsImage4] = useState(false);
   let { state }= useLocation();
+  const isSPSC = () => {
+    if (state.catalog ==='SPSC')
+      return true
+    else return false
+  }
+  const handleImage1 = () => {
+    setIsImage1(true)
+    setIsImage2(false)
+    setIsImage3(false)
+    setIsImage4(false)
+  }
+
+  const handleImage2 = () => {
+    setIsImage2(true)
+    setIsImage1(false)
+    setIsImage3(false)
+    setIsImage4(false)
+  }
+  const handleImage3 = () => {
+    setIsImage3(true)
+    setIsImage2(false)
+    setIsImage1(false)
+    setIsImage4(false)
+  }
+  const handleImage4 = () => {
+    setIsImage4(true)
+    setIsImage2(false)
+    setIsImage3(false)
+    setIsImage1(false)
+  }
+  
   const storedUser = localStorage.getItem('Three-R-user');
  useEffect(() => {
     if (storedUser) {
@@ -61,15 +96,22 @@ const handleProductList = () => {
       <div className="detailproduct">
         <div className="detailproduct__info">
           <div className="info__image">
-            <div className="image__minor">
-              <img src={state.thumb} alt={state.name} />
-              <img src={state.thumb} alt={state.name} />
-              <img src={state.thumb} alt={state.name} />
-              <img src={state.thumb} alt={state.name} />
-            </div>
-            <div className="image__main">
-              <img src={state.thumb} alt={state.name} />
-            </div>
+            {!isSPSC()&&
+            (<img src={state.thumb} alt={state.name}/>)}
+            {isSPSC()&&
+            (<div className="image__minor">
+              <img src={state.thumb} alt={state.name} onClick={handleImage1}/>
+              <img src={state.subthumb[0]} alt={state.name} onClick={handleImage2}/>
+              <img src={state.subthumb[1]} alt={state.name} onClick={handleImage3}/>
+              <img src={state.subthumb[2]} alt={state.name} onClick={handleImage4}/>
+            </div>)}
+            {isSPSC()&&
+            (<div className="image__main">
+              {isImage1&&(<img src={state.thumb} alt={state.name} />)}
+              {isImage2&&(<img src={state.subthumb[0]} alt={state.name} />)}
+              {isImage3&&(<img src={state.subthumb[1]} alt={state.name} />)}
+              {isImage4&&(<img src={state.subthumb[2]} alt={state.name} />)}
+            </div>)}
           </div>
           <div className="info__detail">
             <div className="detail__code">

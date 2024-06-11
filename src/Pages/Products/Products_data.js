@@ -8,6 +8,7 @@ const products = [
         codID: "1",
         comment: 3,
         thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST1.png",
+         
         
     },
     {
@@ -30,7 +31,12 @@ const products = [
         codID: "1",
         comment: 3,
         thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC1.jpg",
-        
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC1(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC1(3).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC1(4).jpg",
+
+        ]
     },
     {
         id: 4,
@@ -41,6 +47,11 @@ const products = [
         codID: "2",
         comment: 3,
         thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC2.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC2(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC2(3).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC2(4).jpg",
+        ]
         
     },
     {
@@ -52,6 +63,11 @@ const products = [
         codID: "3",
         comment: 3,
         thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC3.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC3(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC3(3).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC3(4).jpg",
+        ]
         
     },
     {
@@ -63,8 +79,357 @@ const products = [
         codID: "4",
         comment: 3,
         thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4(3).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4(4).jpg",
+        ]
         
     },
+    {
+        id: 7,
+        name: "SẢN PHẨM 7",
+        type: "Giay",
+        star: 2,
+        catalog: "SPSC",
+        codID: "5",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPST2.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST2(1).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST2(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST2(3).jpg",
+        ]
+        
+    },
+    {
+        id: 8,
+        name: "SẢN PHẨM 8",
+        type: "Giay",
+        star: 2,
+        catalog: "SPSC",
+        codID: "6",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPST3.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST3(1).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST3(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST3(3).jpg",
+        ]
+        
+    },
+    {
+        id: 9,
+        name: "SẢN PHẨM 9",
+        type: "Tui",
+        star: 2,
+        catalog: "SPSC",
+        codID: "7",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPST4.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST4(1).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST4(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST4(3).jpg",
+        ]
+        
+    },
+    {
+        id: 10,
+        name: "SẢN PHẨM 10",
+        type: "Tui",
+        star: 2,
+        catalog: "SPSC",
+        codID: "8",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPST5.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST5(1).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST5(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST5(3).jpg",
+        ]
+        
+    },
+    {
+        id: 11,
+        name: "SẢN PHẨM 11",
+        type: "Ao",
+        star: 2,
+        catalog: "SPSC",
+        codID: "9",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPST6.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST6(1).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST6(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST6(3).jpg",
+        ]
+        
+    },
+    {
+        id: 12,
+        name: "SẢN PHẨM 12",
+        type: "Tui",
+        star: 2,
+        catalog: "SPSC",
+        codID: "10",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPST7.jpg",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST7(1).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST7(2).jpg",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST7(3).jpg",
+        ]
+        
+    },
+    {
+        id: 13,
+        name: "SẢN PHẨM 13",
+        type: "Giay",
+        star: 2,
+        catalog: "SPSC",
+        codID: "11",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPST10.webp",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST10(1).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST10(2).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPST10(3).webp",
+        ]
+        
+    },
+    {
+        id: 14,
+        name: "SẢN PHẨM 14",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "3",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST3.jpg",
+    },
+    {
+        id: 15,
+        name: "SẢN PHẨM 15",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "4",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST4.jpg",
+    },
+    {
+        id: 16,
+        name: "SẢN PHẨM 16",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "5",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST5.jpg",
+    },
+    {
+        id: 17,
+        name: "SẢN PHẨM 17",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "6",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST6.jpg",
+    },
+    {
+        id: 18,
+        name: "SẢN PHẨM 18",
+        type: "Ao",
+        catalog: "SPST",
+        star: 2,
+        codID: "7",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST7.jpg",
+    },
+    {
+        id: 19,
+        name: "SẢN PHẨM 19",
+        type: "Tui",
+        catalog: "SPST",
+        star: 2,
+        codID: "8",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST8.jpg",
+    },
+    {
+        id: 20,
+        name: "SẢN PHẨM 20",
+        type: "Tui",
+        catalog: "SPST",
+        star: 2,
+        codID: "9",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST9.jpg",
+    },
+    {
+        id: 21,
+        name: "SẢN PHẨM 21",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "10",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST10.jpg",
+    },
+    {
+        id: 22,
+        name: "SẢN PHẨM 22",
+        type: "Tui",
+        catalog: "SPST",
+        star: 2,
+        codID: "11",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST11.jpg",
+    },
+    {
+        id: 23,
+        name: "SẢN PHẨM 23",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "12",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST12.jpg",
+    },
+    {
+        id: 24,
+        name: "SẢN PHẨM 24",
+        type: "Tui",
+        catalog: "SPST",
+        star: 2,
+        codID: "13",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST13.jpg",
+    },
+    {
+        id: 25,
+        name: "SẢN PHẨM 25",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "14",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST14.jpg",
+    },
+    {
+        id: 26,
+        name: "SẢN PHẨM 26",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "15",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST15.jpg",
+    },
+    {
+        id: 27,
+        name: "SẢN PHẨM 27",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "16",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST16.jpg",
+    },
+
+    {
+        id: 28,
+        name: "SẢN PHẨM 28",
+        type: "Phu kien",
+        catalog: "SPST",
+        star: 2,
+        codID: "17",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST17.jpg",
+    },
+    {
+        id: 29,
+        name: "SẢN PHẨM 29",
+        type: "Quan",
+        catalog: "SPST",
+        star: 2,
+        codID: "18",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST18.jpg",
+    },
+    {
+        id: 30,
+        name: "SẢN PHẨM 30",
+        type: "Tui",
+        catalog: "SPST",
+        star: 2,
+        codID: "19",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST19.jpg",
+    },
+    {
+        id: 31,
+        name: "SẢN PHẨM 31",
+        type: "Ao",
+        catalog: "SPST",
+        star: 2,
+        codID: "20",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST20.jpg",
+    },
+    {
+        id: 32,
+        name: "SẢN PHẨM 32",
+        type: "Tui",
+        catalog: "SPST",
+        star: 2,
+        codID: "21",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST21.jpg",
+    },
+    {
+        id: 33,
+        name: "SẢN PHẨM 33",
+        type: "Quan",
+        catalog: "SPST",
+        star: 2,
+        codID: "22",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST22.jpg",
+    },
+    {
+        id: 34,
+        name: "SẢN PHẨM 34",
+        type: "Quan",
+        catalog: "SPST",
+        star: 2,
+        codID: "23",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST23.jpg",
+    },
+    {
+        id: 35,
+        name: "SẢN PHẨM 35",
+        type: "Quan",
+        catalog: "SPST",
+        star: 2,
+        codID: "24",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST24.jpg",
+    },
+    {
+        id: 36,
+        name: "SẢN PHẨM 36",
+        type: "Ão",
+        catalog: "SPST",
+        star: 2,
+        codID: "25",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST25.jpg",
+    },
+
 ]
 
 export default products

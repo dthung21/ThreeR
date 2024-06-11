@@ -14,7 +14,14 @@
 .detailproduct .detailproduct__info .info__image {
     display: flex;
     gap: 20px;
+    width: 471px;
+    height: 375.25px;
 }
+.detailproduct__info .info__image img{
+    width: 471px;
+    height: 375.25px;
+}
+
 .detailproduct__info .info__image .image__minor {
     display: flex;
     flex-direction: column;
