@@ -296,7 +296,7 @@ const products = [
         star: 2,
         codID: "12",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST12.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST12.JPG",
     },
     {
         id: 24,
@@ -306,7 +306,7 @@ const products = [
         star: 2,
         codID: "13",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST13.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST13.JPG",
     },
     {
         id: 25,
@@ -316,7 +316,7 @@ const products = [
         star: 2,
         codID: "14",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST14.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST14.JPG",
     },
     {
         id: 26,
@@ -326,7 +326,7 @@ const products = [
         star: 2,
         codID: "15",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST15.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST15.JPG",
     },
     {
         id: 27,
@@ -336,7 +336,7 @@ const products = [
         star: 2,
         codID: "16",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST16.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST16.JPG",
     },
 
     {
@@ -347,7 +347,7 @@ const products = [
         star: 2,
         codID: "17",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST17.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST17.JPG",
     },
     {
         id: 29,
@@ -357,7 +357,7 @@ const products = [
         star: 2,
         codID: "18",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST18.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST18.JPG",
     },
     {
         id: 30,
@@ -367,7 +367,7 @@ const products = [
         star: 2,
         codID: "19",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST19.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST19.JPG",
     },
     {
         id: 31,
@@ -377,7 +377,7 @@ const products = [
         star: 2,
         codID: "20",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST20.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST20.JPG",
     },
     {
         id: 32,
@@ -387,7 +387,7 @@ const products = [
         star: 2,
         codID: "21",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST21.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST21.JPG",
     },
     {
         id: 33,
@@ -397,7 +397,7 @@ const products = [
         star: 2,
         codID: "22",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST22.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST22.JPG",
     },
     {
         id: 34,
@@ -407,7 +407,7 @@ const products = [
         star: 2,
         codID: "23",
         comment: 3,
-        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST23.jpg",
+        thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST23.JPG",
     },
     {
         id: 35,
