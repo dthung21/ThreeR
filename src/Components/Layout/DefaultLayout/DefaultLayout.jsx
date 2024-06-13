@@ -74,7 +74,7 @@ function DefaultLayout( { children } ) {
         <div>
             
             <Header showNavbar={showNavbar} setIsLogin={() => setIsLogin(true)} isLogin={isLogin} user={user}  handleLogout={handleLogout}/>
-            {/* <Message isLogin={isLogin} user={user} /> */}
+            <Message isLogin={isLogin} user={user} />
             <div className="container">
                 {isNavbarVisible && <Navbar />}
                 <div className="content">{children}</div>
