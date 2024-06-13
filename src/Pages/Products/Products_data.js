@@ -429,7 +429,70 @@ const products = [
         comment: 3,
         thumb: "./DANHMUCDICHVU/SANGTAO/SPST/SPST25.jpg",
     },
-
+    {
+        id: 37,
+        name: "SẢN PHẨM 37",
+        type: "Giay",
+        star: 2,
+        catalog: "SPSC",
+        codID: "12",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4.webp",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4(1).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4(5).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC4(6).webp",
+        ]
+        
+    },
+    {
+        id: 38,
+        name: "SẢN PHẨM 38",
+        type: "Giay",
+        star: 2,
+        catalog: "SPSC",
+        codID: "13",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC5.webp",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC5(1).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC5(3).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC5(6).webp",
+        ]
+        
+    },
+    {
+        id: 39,
+        name: "SẢN PHẨM 39",
+        type: "Giay",
+        star: 2,
+        catalog: "SPSC",
+        codID: "14",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC6.webp",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC6(1).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC6(4).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC6(7).webp",
+        ]
+        
+    },
+    {
+        id: 40,
+        name: "SẢN PHẨM 40",
+        type: "Giay",
+        star: 2,
+        catalog: "SPSC",
+        codID: "15",
+        comment: 3,
+        thumb: "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC7(7).webp",
+        subthumb: [
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC7(2).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC7(5).webp",
+            "./DANHMUCDICHVU/SUACHUA/SPSC/SPSC7(6).webp",
+        ]
+        
+    },
 ]
 
 export default products

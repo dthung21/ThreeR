@@ -5,13 +5,16 @@ const Intro = () => {
   return (
     <div className="intro">
       <div className="intro__col">
-        <h1>About</h1>
-        <p className='lighter'>Subheading for description or instructions</p>
-        <p>Body text for your whole article or post. We'll put in some lorem ipsum to show how a filled-out page might look:</p>
-        <p>Excepteur efficient emerging, minim veniam anim auto carfully curated Finza conver sation exquisite perfect nostrud nisi intricate Content. 
-          Qui international first-class nulla ut. Punctual adipisicing, essential lovely queen tempor eiusomod irure. Exclusive izakaya charming Scandinavian 
-          impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable offica Helsinki excepteur Basset hound. 
-          Zurich sleepy perfect consectetur.</p>
+        <h1>Về chúng tôi</h1>
+        <p className='lighter'>Câu chuyện về ThreeR</p>
+        <p>Trong một hành trình khám phá thị trường, chúng tôi nhận ra vấn đề lãng phí và lượng rác thải 
+          ngày càng tăng. Thay vì chỉ than phiền, chúng tôi quyết định hành động.
+        </p>
+        <p>Từ một ý tưởng nhỏ, ThreeR ra đời với triết lý "Reuse, Renew, Recover" (Tái sử dụng, làm mới, khôi phục).
+           Mỗi sản phẩm thiết kế sang tạo đều được cá nhân hóa, phản ánh cá tính của từng khách hàng.</p>
+        <p>Slogan "Sự hài lòng của bạn - Giá trị của chúng tôi" thể hiện cam kết của chúng tôi đến với khách hàng. Với sự lắng nghe và cải tiến liên tục,
+          ThreeR không chỉ là nguồn cảm hứng cho việc bảo vệ môi trường, mà còn là biểu tượng của sự sáng tạo và tinh thần khởi nghiệp. 
+        </p>
       </div>
       <div className="intro__col">
         <img src={intro} alt="intro" />
